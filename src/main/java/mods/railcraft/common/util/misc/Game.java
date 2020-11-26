@@ -213,11 +213,6 @@ public final class Game {
                 }
             }
         }
-
-        @Override
-        public void fingerprint(String mod) {
-            msg(Level.FATAL, "{0} failed validation, terminating. Please re-download {0} from an official source.", mod);
-        }
     }
 
     /**
@@ -249,7 +244,5 @@ public final class Game {
         default void debug(String msg, Object... args) {}
 
         default void api(String mod, Throwable error, Class<?>... classFiles) {}
-
-        default void fingerprint(String mod) {}
     }
 }

@@ -180,7 +180,7 @@ public class ItemFirestoneRefined extends ItemFirestone {
 
         if (player.canPlayerEdit(pos, side, stack) && world.isAirBlock(pos)) {
             SoundHelper.playSound(world, null, pos, SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.BLOCKS, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
-            world.setBlockState(pos, Blocks.FIRE.getDefaultState());
+            //world.setBlockState(pos, Blocks.FIRE.getDefaultState());
             stack.damageItem(1, player);
             return EnumActionResult.SUCCESS;
         }
@@ -190,12 +190,12 @@ public class ItemFirestoneRefined extends ItemFirestone {
     @Override
     public boolean itemInteractionForEntity(ItemStack stack, EntityPlayer playerIn, EntityLivingBase target, EnumHand hand) {
         if (!target.isImmuneToFire()) {
-            target.setFire(5);
+            //target.setFire(5);
             stack.damageItem(1, playerIn);
             SoundHelper.playSound(playerIn.world, null, target.getPosition(), SoundEvents.ITEM_FIRECHARGE_USE, SoundCategory.PLAYERS, 1.0F, itemRand.nextFloat() * 0.4F + 0.8F);
             playerIn.swingArm(hand);
             BlockPos pos = new BlockPos(target);
-            playerIn.world.setBlockState(pos, Blocks.FIRE.getDefaultState());
+            //playerIn.world.setBlockState(pos, Blocks.FIRE.getDefaultState());
             return true;
         }
         return false;

@@ -30,7 +30,7 @@ public class FirestoneTickHandler {
             return;
         if (entity instanceof EntityPlayer && ((EntityPlayer) entity).openContainer != ((EntityPlayer) entity).inventoryContainer)
             return;
-        InventoryComposite.of(entity).streamStacks().forEach(stack -> FirestoneTools.trySpawnFire(entity.world, entity.getPosition(), stack));
+        //InventoryComposite.of(entity).streamStacks().forEach(stack -> FirestoneTools.trySpawnFire(entity.world, entity.getPosition(), stack));
     }
 
 }

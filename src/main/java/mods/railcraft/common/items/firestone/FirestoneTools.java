@@ -44,7 +44,7 @@ public final class FirestoneTools {
         return InvTools.isStackEqualToBlock(stack, EnumOreMagic.FIRESTONE.block()) && stack.getItemDamage() == EnumOreMagic.FIRESTONE.ordinal();
     };
 
-    @Contract("_,_,null->false")
+    /*@Contract("_,_,null->false")
     public static boolean trySpawnFire(World world, BlockPos pos, @Nullable ItemStack stack) {
         if (InvTools.isEmpty(stack) || !SPAWNS_FIRE.test(stack))
             return false;
@@ -55,9 +55,9 @@ public final class FirestoneTools {
         if (spawnedFire && stack.isItemStackDamageable() && stack.getItemDamage() < stack.getMaxDamage() - 1)
             InvTools.damageItem(stack, 1);
         return spawnedFire;
-    }
+    }*/
 
-    public static boolean spawnFire(World world, BlockPos pos) {
+    /*public static boolean spawnFire(World world, BlockPos pos) {
         Random rnd = MiscTools.RANDOM;
         int x = pos.getX() - 5 + rnd.nextInt(12);
         int y = pos.getY() - 5 + rnd.nextInt(12);
@@ -70,7 +70,7 @@ public final class FirestoneTools {
 
         BlockPos firePos = new BlockPos(x, y, z);
         return canBurn(world, firePos) && world.setBlockState(firePos, Blocks.FIRE.getDefaultState());
-    }
+    }*/
 
     private static boolean canBurn(World world, BlockPos pos) {
         if (!WorldPlugin.isBlockAir(world, pos))

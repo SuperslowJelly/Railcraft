@@ -59,7 +59,7 @@ public class EntityItemFirestone extends EntityItemFireproof {
             if (clock % 4 != 0)
                 return;
             ItemStack stack = getItem();
-            FirestoneTools.trySpawnFire(world, getPosition(), stack);
+            //FirestoneTools.trySpawnFire(world, getPosition(), stack);
         }
     }
 
